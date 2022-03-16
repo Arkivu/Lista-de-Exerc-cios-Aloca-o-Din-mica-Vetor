@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int i, n, x;
+    int *ptr;
+
+    printf("Entre com o tamanho do vetor: ");
+    scanf("%d", &n);
+
+    //alocando espaço para os valores
+    ptr = (int*)malloc(n * sizeof(int));
+
+    //armazenando os números no espaço alocado
+    for(i = 0 ; i < n; i++)
+    {
+        printf("Entre com n[%d]: ", i+1);
+        scanf("%d", &ptr[i]);
+    }
+
+    printf("Entre com o número X: ");
+    scanf("%d", &x);
+
+    for(i = 0; i < n; i++)
+    {
+        if(&ptr[i]%x==0){
+            printf("%d  ", ptr[i]);
+        }
+        else{
+            do 
+        }
+    }
+
+    //desalocando o espaço utilizado anteriormente
+    free(ptr);
+    return 0;
+}
